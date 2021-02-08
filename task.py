@@ -1,5 +1,5 @@
 
-
+import unittest
 import calendar
 from numpy import linalg
 import numpy as np
@@ -67,4 +67,8 @@ for i in range(len(new_dic_lst)):
 
 print(new_dic)
 # print(find_day('2020-01-05'))
-
+class testdic(unittest.TestCase):
+  D1=new_dic
+  D2={'Mon': 2, 'Tue': 4.0, 'Wed': 6.0, 'Thu': 8.0, 'Fri': 10.0, 'Sat': 12.0, 'Sun': 14}
+  def test(self):
+        self.assertDictEqual(self.D1, self.D2)
